@@ -4443,3 +4443,6 @@ a.post-thumbnail:hover {
 		height: 100px; 
 	} 
 }
+.entry-content ul {
+	display: block;
+}
