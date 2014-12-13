@@ -131,4 +131,8 @@
 			} );
 		}
 	} );
+	$('img[align=right]').addClass('alignright');
+	$('img[align=left]').addClass('alignleft');
+	$('img[align=center]').addClass('aligncenter');
+	$( "p:has(img)" ).addClass( "nomargin" );
 } )( jQuery );

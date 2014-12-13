@@ -1,0 +1,5 @@
+<?php if ( has_post_thumbnail()) :
+				twentyfourteen_post_thumbnail();	
+			else: ?>
+			<div class="post-thumbnail"><img src="<?php echo catchFirstImage(); ?>" title="<?php the_title(); ?>" alt="<?php the_title(); ?>" class="attachment-twentyfourteen-full-width wp-post-image" /></div>
+<?php endif; ?>

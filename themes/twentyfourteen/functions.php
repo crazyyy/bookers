@@ -70,8 +70,6 @@ function twentyfourteen_setup() {
 	// This theme styles the visual editor to resemble the theme style.
 	add_editor_style( array( 'css/editor-style.css', twentyfourteen_font_url(), 'genericons/genericons.css' ) );
 
-	// Add RSS feed links to <head> for posts and comments.
-	add_theme_support( 'automatic-feed-links' );
 
 	// Enable support for Post Thumbnails, and declare two sizes.
 	add_theme_support( 'post-thumbnails' );
@@ -93,7 +91,7 @@ function twentyfourteen_setup() {
 	) );
 
 	/*
-	 * Enable support for Post Formats.
+	 * !WARNING Enable support for Post Formats.
 	 * See http://codex.wordpress.org/Post_Formats
 	 */
 	add_theme_support( 'post-formats', array(
@@ -173,8 +171,8 @@ function twentyfourteen_widgets_init() {
 		'description'   => __( 'Main sidebar that appears on the left.', 'twentyfourteen' ),
 		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
 		'after_widget'  => '</aside>',
-		'before_title'  => '<h1 class="widget-title">',
-		'after_title'   => '</h1>',
+		'before_title'  => '<h4 class="widget-title">',
+		'after_title'   => '</h4>',
 	) );
 	register_sidebar( array(
 		'name'          => __( 'Content Sidebar', 'twentyfourteen' ),
@@ -182,8 +180,8 @@ function twentyfourteen_widgets_init() {
 		'description'   => __( 'Additional sidebar that appears on the right.', 'twentyfourteen' ),
 		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
 		'after_widget'  => '</aside>',
-		'before_title'  => '<h1 class="widget-title">',
-		'after_title'   => '</h1>',
+		'before_title'  => '<h4 class="widget-title">',
+		'after_title'   => '</h4>',
 	) );
 	register_sidebar( array(
 		'name'          => __( 'Footer Widget Area', 'twentyfourteen' ),
@@ -191,8 +189,8 @@ function twentyfourteen_widgets_init() {
 		'description'   => __( 'Appears in the footer section of the site.', 'twentyfourteen' ),
 		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
 		'after_widget'  => '</aside>',
-		'before_title'  => '<h1 class="widget-title">',
-		'after_title'   => '</h1>',
+		'before_title'  => '<h4 class="widget-title">',
+		'after_title'   => '</h4>',
 	) );
 }
 add_action( 'widgets_init', 'twentyfourteen_widgets_init' );
@@ -339,7 +337,7 @@ endif;
 
 if ( ! function_exists( 'twentyfourteen_list_authors' ) ) :
 /**
- * Print a list of all site contributors who published at least one post.
+ * !WARNING Print a list of all site contributors who published at least one post.
  *
  * @since Twenty Fourteen 1.0
  */
@@ -512,4 +510,24 @@ require get_template_directory() . '/inc/customizer.php';
  */
 if ( ! class_exists( 'Featured_Content' ) && 'plugins.php' !== $GLOBALS['pagenow'] ) {
 	require get_template_directory() . '/inc/featured-content.php';
+}
+
+/*
+ * Murder
+ *
+*/ 
+//  Catch first image from post and display it
+function catchFirstImage() {
+    global $post, $posts;
+    $first_img = '';
+    ob_start();
+    ob_end_clean();
+    $output = preg_match_all('/<img.+src=[\'"]([^\'"]+)[\'"].*>/i',
+    $post->post_content, $matches);
+    $first_img = $matches [1] [0];
+//  If post dont have an image - display image "noimage"
+//  RU: Если запись не содержит изображения - показывать картинку "noimage" 
+    if(empty($first_img)){
+    $first_img = get_template_directory_uri() . '/images/noimage.jpg'; }
+    return $first_img;
 }

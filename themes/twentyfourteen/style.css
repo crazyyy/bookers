@@ -634,7 +634,9 @@ span > object {
 	margin-left: auto;
 	margin-right: auto;
 }
-
+.nomargin {
+	margin: 0;
+}
 blockquote.alignleft,
 figure.wp-caption.alignleft,
 img.alignleft {
@@ -820,6 +822,7 @@ span + .edit-link:before,
 .site {
 	background-color: #fff;
 	max-width: 1260px;
+	margin: 0 auto;
 	position: relative;
 }
 
@@ -1045,7 +1048,7 @@ span + .edit-link:before,
  */
 
 .content-area {
-	padding-top: 48px;
+	padding-top: 20px;
 }
 
 .hentry {
@@ -1059,7 +1062,8 @@ span + .edit-link:before,
 .site-content .entry-meta,
 .page-content {
 	margin: 0 auto;
-	max-width: 474px;
+	/* max-width: 474px; */
+	width: 96%;
 }
 
 .page-content {
@@ -1888,7 +1892,7 @@ a.post-thumbnail:hover {
  */
 
 .singular .site-content .hentry.has-post-thumbnail {
-	margin-top: -48px;
+	/* margin-top: -48px; */
 }
 
 
@@ -3039,7 +3043,7 @@ a.post-thumbnail:hover {
  */
 
 .site-main .widecolumn {
-	padding-top: 72px;
+	/* padding-top: 72px; */
 	width: auto;
 }
 .site-main .mu_register,
@@ -3292,7 +3296,7 @@ a.post-thumbnail:hover {
 	}
 
 	.site-content .has-post-thumbnail .entry-header {
-		margin-top: -48px;
+		/* margin-top: -48px; */
 	}
 }
 
@@ -3331,8 +3335,8 @@ a.post-thumbnail:hover {
 	.site-content .entry-content,
 	.site-content .entry-summary,
 	.site-content footer.entry-meta {
-		padding-right: 30px;
-		padding-left: 30px;
+		padding-right: 10px;
+		padding-left: 10px;
 	}
 
 	.singular .site-content .hentry.has-post-thumbnail {
@@ -3345,7 +3349,7 @@ a.post-thumbnail:hover {
 
 	.full-width .site-content .has-post-thumbnail .entry-header,
 	.full-width .site-content .hentry.has-post-thumbnail:first-child {
-		margin-top: -48px;
+		/* margin-top: -48px; */
 	}
 
 	#secondary,
@@ -3472,7 +3476,8 @@ a.post-thumbnail:hover {
 	/* Primary Navigation */
 
 	.primary-navigation {
-		float: right;
+		/* float: right; */
+		float: left;
 		font-size: 11px;
 		margin: 0 1px 0 -12px;
 		padding: 0;
@@ -3645,11 +3650,11 @@ a.post-thumbnail:hover {
 @media screen and (min-width: 846px) {
 	.content-area,
 	.content-sidebar {
-		padding-top: 72px;
+		/* padding-top: 72px; */
 	}
 
 	.site-content .has-post-thumbnail .entry-header {
-		margin-top: -48px;
+		/* margin-top: -48px; */
 	}
 
 	.comment-list .trackback,
@@ -3678,7 +3683,7 @@ a.post-thumbnail:hover {
 	}
 
 	.full-width .site-content .hentry.has-post-thumbnail:first-child {
-		margin-top: -72px;
+		/* margin-top: -72px; */
 	}
 
 	.featured-content {
@@ -4007,7 +4012,7 @@ a.post-thumbnail:hover {
 
 @media screen and (min-width: 1040px) {
 	.site-content .has-post-thumbnail .entry-header {
-		margin-top: -48px;
+		/* margin-top: -48px; */
 	}
 
 	.archive-header,
@@ -4034,8 +4039,8 @@ a.post-thumbnail:hover {
 	.full-width .site-content .entry-content,
 	.full-width .site-content .entry-summary,
 	.full-width .site-content footer.entry-meta {
-		padding-right: 30px;
-		padding-left: 30px;
+		padding-right: 10px;
+		padding-left: 10px;
 	}
 }
 
