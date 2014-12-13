@@ -12,34 +12,16 @@
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 	<header class="entry-header">
-		<?php if ( in_array( 'category', get_object_taxonomies( get_post_type() ) ) && twentyfourteen_categorized_blog() ) : ?>
 		<div class="entry-meta">
-			<?php if ( function_exists('yoast_breadcrumb') ) { yoast_breadcrumb('<p id="breadcrumbs">','</p>'); } ?>
+		<?php if ( function_exists('yoast_breadcrumb') ) { yoast_breadcrumb('<p id="breadcrumbs">','</p>'); } ?>
 		</div>
-		<?php
-			endif;
 
-			if ( is_single() ) :
+		<?php	if ( is_single() ) :
 				the_title( '<h1 class="entry-title">', '</h1>' );
 			else :
 				the_title( '<h1 class="entry-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h1>' );
 			endif;
 		?>
-<?php echo do_shortcode( '[GARD]' ) ?>
-		<div class="entry-meta">
-			<?php
-				if ( 'post' == get_post_type() )
-					twentyfourteen_posted_on();
-
-				if ( ! post_password_required() && ( comments_open() || get_comments_number() ) ) :
-			?>
-			<span class="comments-link"><?php comments_popup_link( __( 'Leave a comment', 'twentyfourteen' ), __( '1 Comment', 'twentyfourteen' ), __( '% Comments', 'twentyfourteen' ) ); ?></span>
-			<?php
-				endif;
-
-				edit_post_link( __( 'Edit', 'twentyfourteen' ), '<span class="edit-link">', '</span>' );
-			?>
-		</div><!-- .entry-meta -->
 	</header><!-- .entry-header -->
 
 	<?php if ( is_search() ) : ?>
@@ -59,6 +41,10 @@
 		?>
 	</div><!-- .entry-content -->
 	<?php endif; ?>
+	
+	<?php get_template_part('advert-content'); ?>
 
+	<!-- noindex -->
 	<?php the_tags( '<footer class="entry-meta"><span class="tag-links">', '', '</span></footer>' ); ?>
+	<!-- // noindex -->
 </article><!-- #post-## -->

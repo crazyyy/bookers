@@ -822,6 +822,7 @@ span + .edit-link:before,
 .site {
 	background-color: #fff;
 	max-width: 1260px;
+	min-width: 320px;
 	margin: 0 auto;
 	position: relative;
 }
@@ -4320,3 +4321,78 @@ a.post-thumbnail:hover {
 		line-height: 36px;
 	}
 }
+
+.adaptive { 
+	width: 580px; 
+	height: 400px;
+	margin: 0 auto;
+	position: relative;
+	z-index: 5;
+	background-color: transparent;
+	overflow: hidden;
+}
+@media(min-width: 729px) { 
+	.adaptive { 
+		width: 728px; 
+		height: 90px; 
+	} 
+}
+@media(max-width: 580px) { 
+	.adaptive { 
+		width: 336px; 
+		height: 280px; 
+	} 
+}
+@media(max-width: 320px) { 
+	.adaptive { 
+		width: 320px; 
+		height: 100px; 
+	} 
+}
+
+.transformer {
+	height: 120px;
+	width: 100%;
+	background-color: transparent;
+	position: relative;
+	z-index: 5;
+	text-align: center;
+}
+.adaptive2 {
+	display: inline-block;
+	margin: 0 auto;
+	width: 980px;
+	height: 120px;
+	background-color: transparent;
+}
+@media (max-width:980px) { 
+	.transformer {
+		height: 90px;
+	}
+	.adaptive2 { 
+		width: 790px; 
+		height: 90px; 
+	} 
+}
+@media (max-width: 789px) { 
+	.transformer {
+		height: 280px;
+	}
+	.adaptive2 { 
+		width: 336px; 
+		height: 280px; 
+	} 
+}
+@media (max-width: 335px) { 
+	.transformer {
+		height: 100px;
+	}
+	.adaptive2 { 
+		width: 320px; 
+		height: 100px; 
+	} 
+}
+
+.adslot_3 { width: 320px; height: 50px; }
+@media (min-width:500px) { .adslot_3 { width: 468px; height: 60px; } }
+@media (min-width:800px) { .adslot_3 { width: 728px; height: 90px; } }

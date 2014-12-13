@@ -135,4 +135,19 @@
 	$('img[align=left]').addClass('alignleft');
 	$('img[align=center]').addClass('aligncenter');
 	$( "p:has(img)" ).addClass( "nomargin" );
+	$("img").error(function(){
+		$(this).hide();
+	});
+
+/*
+	// remove adsense 
+	var swidth = $('.site').width();
+	if (swidth <= 780) {
+	    $('#adsidebar-head').removeClass('adsbygoogle');
+	   
+	};
+*/
+
+
+
 } )( jQuery );
