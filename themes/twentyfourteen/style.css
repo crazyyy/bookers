@@ -637,6 +637,9 @@ span > object {
 .nomargin {
 	margin: 0;
 }
+.nomargin br {
+	display: none;
+}
 blockquote.alignleft,
 figure.wp-caption.alignleft,
 img.alignleft {
@@ -4392,7 +4395,51 @@ a.post-thumbnail:hover {
 		height: 100px; 
 	} 
 }
+.adaptive3-container {
+	text-align: center;
+	margin-left: -30px;
+	margin-right: -30px;
+	padding: 20px 0;
+}
 
-.adslot_3 { width: 320px; height: 50px; }
-@media (min-width:500px) { .adslot_3 { width: 468px; height: 60px; } }
-@media (min-width:800px) { .adslot_3 { width: 728px; height: 90px; } }
+.adaptive3 { 
+	width: 300px; 
+	height: 250px; 
+	background-color: transparent;
+	display: block;
+	margin: 0 auto;
+	text-align: center;
+	position: relative;
+	z-index: 10;
+
+}
+@media (max-width: 919px) { 
+	.adaptive3 { 
+		width: 250px; 
+		height: 360px; 
+	} 
+}
+@media (max-width: 749px) { 
+	.adaptive3 { 
+		width: 160px; 
+		height: 600px; 
+	} 
+}
+@media (max-width: 672px) { 
+	.adaptive3 { 
+		width: 468px; 
+		height: 60px; 
+	} 
+}
+@media (max-width: 470px) { 
+	.adaptive3 { 
+		width: 336px; 
+		height: 280px; 
+	} 
+}
+@media (max-width: 320px) { 
+	.adaptive3 { 
+		width: 320px; 
+		height: 100px; 
+	} 
+}
