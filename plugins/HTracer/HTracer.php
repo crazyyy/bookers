@@ -2058,13 +2058,13 @@ class HTracer// класс нужен для экранирования имен
 			'ul_list'=>Array(
 				'shablon'=>'<li><a href="_HREF_" title="_KEY2_">_KEY_</a></li>',
 				'sort'=>false,
-				'pre'=>'<ul style="margin-top:0">',
+				'pre'=>'<div class="clearfix"></div><ul class="seealso" style="margin-top:0">',
 				'post'=>'</ul>'
 			),
 			'ol_list'=>Array(
 				'shablon'=>'<li><a href="_HREF_" title="_KEY2_">_KEY_</a></li>',
 				'sort'=>false,
-				'pre'=>'<ol style="margin-top:0">',
+				'pre'=>'<div class="clearfix"></div><ol class="seealso" style="margin-top:0">',
 				'post'=>'</ol>'
 			),
 			'br_list'=>Array(

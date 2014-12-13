@@ -18,17 +18,13 @@ get_header(); ?>
 
 			<?php if ( have_posts() ) : ?>
 
-			<header class="archive-header">
-				<h1 class="archive-title"><?php printf( __( 'Tag Archives: %s', 'twentyfourteen' ), single_tag_title( '', false ) ); ?></h1>
-
-				<?php
-					// Show an optional term description.
-					$term_description = term_description();
-					if ( ! empty( $term_description ) ) :
-						printf( '<div class="taxonomy-description">%s</div>', $term_description );
-					endif;
-				?>
-			</header><!-- .archive-header -->
+			<article class="entry-content">
+			<?php query_posts("showposts=1&orderby=rand"); ?>
+			<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
+				<?php the_excerpt(); ?>
+			<?php endwhile; endif; ?>
+			<?php wp_reset_query(); ?>
+			</article>
 
 			<?php
 					// Start the Loop.
@@ -51,6 +47,29 @@ get_header(); ?>
 
 				endif;
 			?>
+
+			<?php query_posts("showposts=5&orderby=rand"); ?>
+			<table class="random-also">
+				<tr>
+				<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
+					<td><a title="<?php the_title(); ?>" href="<?php the_permalink(); ?>">
+						<img src="<?php echo catchFirstImage(); ?>" title="<?php the_title(); ?>" alt="<?php the_title(); ?>" class="attachment-twentyfourteen-full-width wp-post-image" />
+						<h6><?php the_title(); ?></h6></a>
+					</td>
+				<?php endwhile; endif; ?>
+				</tr>
+			</table>
+			<?php wp_reset_query(); ?>
+			<article class="entry-content">
+			<?php query_posts("showposts=2&orderby=rand"); ?>
+			<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
+			
+				<?php the_excerpt(); ?>
+			
+			<?php endwhile; endif; ?>
+			<?php wp_reset_query(); ?>
+			</article>
+
 		</div><!-- #content -->
 	</section><!-- #primary -->
 

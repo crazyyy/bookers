@@ -531,3 +531,13 @@ function catchFirstImage() {
     $first_img = get_template_directory_uri() . '/images/noimage.jpg'; }
     return $first_img;
 }
+
+function new_excerpt_more( $more ) {
+	return '...';
+}
+add_filter('excerpt_more', 'new_excerpt_more');
+
+function new_excerpt_length($length) {
+	return 120;
+}
+add_filter('excerpt_length', 'new_excerpt_length');
