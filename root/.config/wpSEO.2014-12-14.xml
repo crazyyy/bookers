@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<options>
+<wp_seo_title_enable>1</wp_seo_title_enable>
+<wp_seo_title_separator><![CDATA[ ]]></wp_seo_title_separator>
+<wp_seo_title_homepage></wp_seo_title_homepage>
+<wp_seo_title_number></wp_seo_title_number>
+<wp_seo_title_author></wp_seo_title_author>
+<wp_seo_title_cleanup>1</wp_seo_title_cleanup>
+<wp_seo_desc_enable>1</wp_seo_desc_enable>
+<wp_seo_desc_default></wp_seo_desc_default>
+<wp_seo_desc_counter>35</wp_seo_desc_counter>
+<wp_seo_key_enable>1</wp_seo_key_enable>
+<wp_seo_key_default></wp_seo_key_default>
+<wp_seo_key_counter>16</wp_seo_key_counter>
+<wp_seo_key_length>4</wp_seo_key_length>
+<wp_seo_key_blacklist></wp_seo_key_blacklist>
+<wp_seo_key_complete></wp_seo_key_complete>
+<wp_seo_key_substantive>1</wp_seo_key_substantive>
+<wp_seo_key_relevance>1</wp_seo_key_relevance>
+<wp_seo_key_labeling></wp_seo_key_labeling>
+<wp_seo_key_xhtml>1</wp_seo_key_xhtml>
+<wp_seo_key_manually></wp_seo_key_manually>
+<wp_seo_desc_tender></wp_seo_desc_tender>
+<wp_seo_desc_manually></wp_seo_desc_manually>
+<wp_seo_title_manually>1</wp_seo_title_manually>
+<wp_seo_noindex_attachment>0</wp_seo_noindex_attachment>
+<wp_seo_noindex_hidden>1</wp_seo_noindex_hidden>
+<wp_seo_noindex_canonical>1</wp_seo_noindex_canonical>
+<wp_seo_noindex_manually></wp_seo_noindex_manually>
+<wp_seo_speed_nocheck></wp_seo_speed_nocheck>
+<wp_seo_misc_static>1</wp_seo_misc_static>
+<wp_seo_misc_monitor></wp_seo_misc_monitor>
+<wp_seo_misc_monitor_timestamp>0</wp_seo_misc_monitor_timestamp>
+<wp_seo_misc_section>1</wp_seo_misc_section>
+<wp_seo_misc_noodp></wp_seo_misc_noodp>
+<wp_seo_misc_noarchive></wp_seo_misc_noarchive>
+<wp_seo_misc_feed>1</wp_seo_misc_feed>
+<wp_seo_misc_attachment>1</wp_seo_misc_attachment>
+<wp_seo_misc_order><![CDATA[%wpseo_title%%wpseo_keywords%%wpseo_desc%%wpseo_robots%]]></wp_seo_misc_order>
+<wp_seo_title_convert></wp_seo_title_convert>
+<wp_seo_desc_convert></wp_seo_desc_convert>
+<wp_seo_key_convert></wp_seo_key_convert>
+<wp_seo_noindex_convert></wp_seo_noindex_convert>
+<wp_seo_speed_settings></wp_seo_speed_settings>
+<wp_seo_misc_settings></wp_seo_misc_settings>
+<wp_seo_export_settings></wp_seo_export_settings>
+<wp_seo_about_wpseo><![CDATA[closed]]></wp_seo_about_wpseo>
+<wp_seo_google_pagerank></wp_seo_google_pagerank>
+<wp_seo_alexa_rank></wp_seo_alexa_rank>
+<wp_seo_yahoo_backlinks></wp_seo_yahoo_backlinks>
+<wp_seo_feedburner_subscribers></wp_seo_feedburner_subscribers>
+<wp_seo_update_version></wp_seo_update_version>
+<wp_seo_update_check></wp_seo_update_check>
+<wp_seo_title_channel_home><![CDATA[%blog% %clip% %keywords% %clip% %title%]]></wp_seo_title_channel_home>
+<wp_seo_title_desc_home><![CDATA[Головна]]></wp_seo_title_desc_home>
+<wp_seo_desc_home>2</wp_seo_desc_home>
+<wp_seo_key_home>2</wp_seo_key_home>
+<wp_seo_noindex_home>1</wp_seo_noindex_home>
+<wp_seo_title_channel_single><![CDATA[%title% %clip% %keywords% %clip% %blog%]]></wp_seo_title_channel_single>
+<wp_seo_title_desc_single><![CDATA[Запис]]></wp_seo_title_desc_single>
+<wp_seo_desc_single>2</wp_seo_desc_single>
+<wp_seo_key_single>2</wp_seo_key_single>
+<wp_seo_noindex_single>1</wp_seo_noindex_single>
+<wp_seo_title_channel_page><![CDATA[%title% %clip% %keywords% %clip% %blog%]]></wp_seo_title_channel_page>
+<wp_seo_title_desc_page><![CDATA[Сторінка]]></wp_seo_title_desc_page>
+<wp_seo_desc_page>2</wp_seo_desc_page>
+<wp_seo_key_page>2</wp_seo_key_page>
+<wp_seo_noindex_page>1</wp_seo_noindex_page>
+<wp_seo_title_channel_category><![CDATA[%title% %clip% %keywords% %clip% %blog%]]></wp_seo_title_channel_category>
+<wp_seo_title_desc_category><![CDATA[Категорія]]></wp_seo_title_desc_category>
+<wp_seo_desc_category>2</wp_seo_desc_category>
+<wp_seo_key_category>2</wp_seo_key_category>
+<wp_seo_noindex_category>4</wp_seo_noindex_category>
+<wp_seo_title_channel_search><![CDATA[%title% %clip% %keywords% %clip% %blog%]]></wp_seo_title_channel_search>
+<wp_seo_title_desc_search><![CDATA[Пошук]]></wp_seo_title_desc_search>
+<wp_seo_desc_search>0</wp_seo_desc_search>
+<wp_seo_key_search>2</wp_seo_key_search>
+<wp_seo_noindex_search>4</wp_seo_noindex_search>
+<wp_seo_title_channel_archive><![CDATA[%title% %clip% %keywords% %clip% %blog%]]></wp_seo_title_channel_archive>
+<wp_seo_title_desc_archive><![CDATA[Архів]]></wp_seo_title_desc_archive>
+<wp_seo_desc_archive>0</wp_seo_desc_archive>
+<wp_seo_key_archive>2</wp_seo_key_archive>
+<wp_seo_noindex_archive>4</wp_seo_noindex_archive>
+<wp_seo_title_channel_tagging><![CDATA[%tag% %clip% %area% %clip% %blog%]]></wp_seo_title_channel_tagging>
+<wp_seo_title_desc_tagging><![CDATA[Тег]]></wp_seo_title_desc_tagging>
+<wp_seo_desc_tagging>0</wp_seo_desc_tagging>
+<wp_seo_key_tagging>2</wp_seo_key_tagging>
+<wp_seo_noindex_tagging>4</wp_seo_noindex_tagging>
+<wp_seo_title_channel_404><![CDATA[%area% %clip% %blog%]]></wp_seo_title_channel_404>
+<wp_seo_title_desc_404><![CDATA[Помилка]]></wp_seo_title_desc_404>
+<wp_seo_desc_404>0</wp_seo_desc_404>
+<wp_seo_key_404>0</wp_seo_key_404>
+<wp_seo_noindex_404>4</wp_seo_noindex_404>
+<wp_seo_noindex_enable>1</wp_seo_noindex_enable>
+</options>
