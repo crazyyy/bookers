@@ -14,3 +14,4 @@ wp-content/wp-cache-config.php
 sftp-config.json
 *.sublime-project
 *.sublime-workspace
+/root/.data
