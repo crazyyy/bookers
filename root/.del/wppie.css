@@ -1,0 +1,52 @@
+
+
+.screen-reader-text:focus  {
+behavior: url(http://syushukru.saitobaza.ru/wp-content/plugins/wp-pie/pie/PIE.htc);
+}
+
+
+/* Buttons */
+button,
+input[type="submit"],
+input[type="button"],
+input[type="reset"]  {
+behavior: url(http://syushukru.saitobaza.ru/wp-content/plugins/wp-pie/pie/PIE.htc);
+}
+
+
+img.wp-smiley,
+.rsswidget img  {
+behavior: url(http://syushukru.saitobaza.ru/wp-content/plugins/wp-pie/pie/PIE.htc);
+}
+
+
+.hentry .mejs-controls .mejs-time-rail span,
+.hentry .mejs-controls .mejs-horizontal-volume-slider .mejs-horizontal-volume-total,
+.hentry .mejs-controls .mejs-horizontal-volume-slider .mejs-horizontal-volume-current  {
+behavior: url(http://syushukru.saitobaza.ru/wp-content/plugins/wp-pie/pie/PIE.htc);
+}
+
+
+.gallery-caption:before  {
+behavior: url(http://syushukru.saitobaza.ru/wp-content/plugins/wp-pie/pie/PIE.htc);
+}
+
+
+.blog .format-aside:first-of-type,
+.single .format-aside:first-of-type,
+.format-aside + .format-aside,
+.format-aside + .format-link,
+.format-link + .format-aside  {
+behavior: url(http://syushukru.saitobaza.ru/wp-content/plugins/wp-pie/pie/PIE.htc);
+}
+
+
+.blog .format-link:first-of-type,
+.single .format-link:first-of-type  {
+behavior: url(http://syushukru.saitobaza.ru/wp-content/plugins/wp-pie/pie/PIE.htc);
+}
+
+
+.paging-navigation .meta-nav  {
+behavior: url(http://syushukru.saitobaza.ru/wp-content/plugins/wp-pie/pie/PIE.htc);
+}
