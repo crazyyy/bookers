@@ -1,5 +1,5 @@
 User-Agent: *
-Sitemap: http://crazyyy.net.ua/sitemap.xml
+Sitemap: http://crazyyy.net.ua/sitemap_index.xml
 
 User-Agent: *
 Crawl-Delay: 10

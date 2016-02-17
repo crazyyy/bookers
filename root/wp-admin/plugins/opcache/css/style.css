@@ -1,0 +1,182 @@
+/*------------------------------------------------------------------------------
+  1.0 - Layout Blocks
+------------------------------------------------------------------------------*/
+
+/* For Dashboard */
+#widgets-wrap{
+	overflow:hidden;
+	margin: 0 -8px;
+}
+
+.postbox-container{
+	float:left
+}
+
+#widgets .meta-box-sortables {
+	margin: 0 8px;
+	min-height: 100px;
+}
+
+#widgets .postbox-container{
+	width:25%
+}
+
+#widgets .postbox .hndle {
+	cursor:auto;
+}
+
+#widgets .postbox .inside {
+	margin-bottom: 0;
+}
+
+#widgets h4 {
+	margin: 0 0 8px 12px;
+	font-size: 14px;
+	font-weight: 400;
+}
+
+#widgets h4 .genericon {
+	font-size: 16px;
+	vertical-align: middle;
+}
+
+#info-widget .inside {
+	padding: 0;
+	margin: 0;
+}
+
+.info-widget {
+	border-bottom: 1px solid #eee;
+	overflow: hidden;
+	padding: 8px 0 0;
+}
+
+.info-widget:last-child {
+	border-bottom: 0;
+}
+
+.info-widget p {
+	padding: 0 12px;
+}
+
+.info-widget div {
+	padding: 0 12px;
+	margin: 1em 0;
+}
+
+.info-widget .contact-list {
+	list-style: circle inside;
+}
+
+#agpl-logo {
+	vertical-align: middle;
+	height: 37px;
+}
+
+#github-logo {
+	vertical-align: middle;
+	height: 14px;
+}
+
+iframe[seamless] {
+	display: inline;
+}
+
+.github-button {
+	height: 20px;
+}
+
+#graphbox .handlediv, #graphbox .hndle {
+	display: none;
+}
+
+@media only screen and (max-width:799px){
+	#wpbody-content #widgets .postbox-container{
+		width:100%
+	}
+}
+
+@media only screen and (min-width:800px) and (max-width:1499px){
+	#wpbody-content #widgets .postbox-container{
+		width:49.5%
+	}
+
+	#wpbody-content #widgets #postbox-container-2,
+	#wpbody-content #widgets #postbox-container-3,
+	#wpbody-content #widgets #postbox-container-4{
+		float:right;
+		width:50.5%
+	}
+}
+
+@media only screen and (min-width:1500px) and (max-width:1800px){
+	#wpbody-content #widgets .postbox-container{
+		width:33.5%
+	}
+
+	#wpbody-content #widgets #postbox-container-1{
+		width:33%
+	}
+
+	#wpbody-content #widgets #postbox-container-3,
+	#wpbody-content #widgets #postbox-container-4{
+		float:right
+	}
+}
+
+
+/*------------------------------------------------------------------------------
+  2.0 - List Posts (/Pages/etc)
+------------------------------------------------------------------------------*/
+/*------------------------------------------------------------------------------
+  2.1 - For Status List
+------------------------------------------------------------------------------*/
+.widefat.fixed.status .column-value {
+	width: 35%;
+}
+
+/*------------------------------------------------------------------------------
+  2.2 - For Scripts List
+------------------------------------------------------------------------------*/
+
+.widefat.fixed.scripts .column-last_used_timestamp,
+.widefat.fixed.scripts .column-timestamp,
+.widefat.fixed.scripts .column-hits,
+.widefat.fixed.scripts .column-memory_consumption {
+	width: 10%;
+}
+
+@media (min-resolution: 2dppx) {
+	@media (max-width: 1200px) {
+		.widefat.fixed.scripts .column-last_used_timestamp,
+		.widefat.fixed.scripts .column-timestamp,
+		.widefat.fixed.scripts .column-memory_consumption {
+			width: 15%;
+		}
+	}
+}
+
+@media (max-width: 782px) {
+	/* WP List Table Adjustments: Columns to hide */
+	.widefat.fixed.scripts .column-last_used_timestamp,
+	.widefat.fixed.scripts .column-timestamp {
+		display: none;
+	}
+
+	.widefat.fixed.scripts .column-hits {
+		width: 15%;
+	}
+
+	.widefat.fixed.scripts .column-memory_consumption {
+		width: 35%;
+	}
+}
+
+/*------------------------------------------------------------------------------
+  2.3 - For Configurations List
+------------------------------------------------------------------------------*/
+.widefat.fixed.configs .column-value {
+	width: 35%;
+}
+
+

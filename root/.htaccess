@@ -125,13 +125,14 @@ Redirectmatch 403 Table\/Latest\/index\.
 <IfModule mod_rewrite.c>
 RewriteCond %{REQUEST_METHOD} POST
 RewriteCond %{REQUEST_URI} ^(.*)?wp-comments-post\.php(.*)$
-RewriteCond %{HTTP_REFERER} !^http(s)?://crazyyy\.net\.ua [NC,OR]
+RewriteCond %{HTTP_REFERER} !^http(s)?://labirin-book\.pp\.ua [NC,OR]
 RewriteCond %{HTTP_USER_AGENT} ^$
 RewriteRule .* http://127.0.0.1 [L]
 </IfModule>
 #AIOWPS_BLOCK_SPAMBOTS_END
 # END All In One WP Security
 
+##################################
 #Supress php errors
 php_flag display_startup_errors off
 php_flag display_errors off
@@ -142,19 +143,7 @@ php_value docref_ext 0
 php_flag  log_errors on
 php_value error_log  /home/p284179/data/PHP_errors.log
 
-# BEGIN WordPress
-<IfModule mod_rewrite.c>
-RewriteEngine On
-RewriteBase /
-RewriteRule ^index\.php$ - [L]
-RewriteRule ^slir/([^/]*)/(.*)$ /wp-content/plugins/pb-responsive-images/slir/index.php?r=$1/$2 [QSA,L]
-RewriteCond %{REQUEST_FILENAME} !-f
-RewriteCond %{REQUEST_FILENAME} !-d
-RewriteRule . /index.php [L]
-</IfModule>
-
-# END WordPress
-
+##################################
 # BEGIN WPSuperCache
 <IfModule mod_rewrite.c>
 RewriteEngine On
@@ -199,8 +188,10 @@ RewriteCond %{HTTPS} !on
 RewriteCond %{DOCUMENT_ROOT}/wp-content/cache/supercache/%{SERVER_NAME}/$1/index.html -f
 RewriteRule ^(.*) "/wp-content/cache/supercache/%{SERVER_NAME}/$1/index.html" [L]
 </IfModule>
+
 # END WPSuperCache
 
+##################################
 #MANUAL COMPRESSION
 <IfModule mod_deflate.c>
 #Compress HTML, CSS, JavaScript, Text, XML and fonts
@@ -232,24 +223,50 @@ BrowserMatch ^Mozilla/4\.0[678] no-gzip
 BrowserMatch \bMSIE !no-gzip !gzip-only-text/html
 Header append Vary User-Agent
 </IfModule>
+
+##################################
 <IfModule mod_expires.c>
 #Enable expirations
-ExpiresActive On
 #Default directive
+ExpiresActive On
 ExpiresDefault "access plus 1 month"
-#My favicon
-ExpiresByType image/x-icon "access plus 1 year"
 #Images
 ExpiresByType image/gif "access plus 1 month"
 ExpiresByType image/png "access plus 1 month"
 ExpiresByType image/jpg "access plus 1 month"
 ExpiresByType image/jpeg "access plus 1 month"
+ExpiresByType image/x-icon "access plus 1 month"
+ExpiresByType image/svg+xml "access plus 1 month"
+# Video
+ExpiresByType video/asf "access plus 1 month"
+ExpiresByType video/avi "access plus 1 month"
+ExpiresByType video/quicktime "access plus 1 month"
+ExpiresByType video/mp4 "access plus 1 month"
+ExpiresByType video/mpeg "access plus 1 month"
 #CSS
 ExpiresByType text/css "access 1 month"
 #Javascript
 ExpiresByType application/javascript "access plus 1 year"
+# PDF
+ExpiresByType application/pdf "access plus 1 month"
+# Flash
+ExpiresByType application/x-shockwave-flash "access plus 1 month"
+# Font
+ExpiresByType application/x-font-ttf "access plus 1 month"
+ExpiresByType application/vnd.ms-fontobject "access plus 1 month"
+ExpiresByType application/x-font-otf "access plus 1 month"
+# Audio
+ExpiresByType audio/mpeg "access plus 1 month"
+ExpiresByType audio/ogg "access plus 1 month"
+ExpiresByType audio/wav "access plus 1 month"
+ExpiresByType audio/wma "access plus 1 month"
+# Zip/Tar
+ExpiresByType application/x-tar "access plus 1 month"
+ExpiresByType application/x-gzip "access plus 1 month"
+ExpiresByType application/zip "access plus 1 month"
 </IfModule>
 
+##################################
 #Password Protect file
 <Files wp-login.php>
 AuthName "CIA login"
@@ -258,9 +275,25 @@ AuthUserFile /home/p284179/data/.htpasswd
 Require valid-user
 </Files>
 
+##################################
 #Prevent viewing of .htaccess file
 <Files .htaccess>
 order allow,deny
 deny from all
 </Files>
- 
+
+##################################
+# BEGIN WordPress
+<IfModule mod_rewrite.c>
+RewriteEngine On
+RewriteBase /
+RewriteRule ^index\.php$ - [L]
+RewriteCond %{REQUEST_FILENAME} !-f 
+RewriteRule ^(.*)-([0-9]+)x([0-9]+)?\.((?i)jpeg|jpg|png|gif) /wp-content/plugins/wp-performance-pack/modules/dynamic_images/serve-dynamic-images.php [QSA,L]
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule . /index.php [L]
+</IfModule>
+
+
+# END WordPress
