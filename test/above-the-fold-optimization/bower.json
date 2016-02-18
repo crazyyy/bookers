@@ -1,0 +1,12 @@
+{
+  "name": "abovethefold",
+  "version": "2.3.4",
+  "ignore": [
+    ".jshintrc",
+    "**/*.txt"
+  ],
+  "dependencies": {
+    "loadcss": "~0.1.7"
+  },
+  "devDependencies": {}
+}
